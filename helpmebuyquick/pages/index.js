@@ -1,25 +1,23 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const products = [
     {
       id: 1,
       name: "iPhone 14 Pro",
-      price: "670,999 naira",
+      price: "670k naira",
       image: "https://via.placeholder.com/300x200?text=iPhone+14+Pro",
     },
     {
       id: 2,
       name: "MacBook Air M2",
-      price: "1,200,000 naira",
+      price: "1.2million naira",
       image: "https://via.placeholder.com/300x200?text=MacBook+Air+M2",
     },
     {
       id: 3,
       name: "Samsung Smart TV",
-      price: "500,000 naira",
+      price: "790k naira",
       image: "https://via.placeholder.com/300x200?text=Samsung+Smart+TV",
     },
   ];
@@ -31,20 +29,23 @@ export default function Home() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
         {products.map((product) => (
-          <Card key={product.id} className="rounded-2xl shadow-md">
+          <div key={product.id} className="bg-white rounded-2xl shadow-md overflow-hidden">
             <img
               src={product.image}
               alt={product.name}
-              className="rounded-t-2xl w-full h-48 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <CardContent className="p-4">
+            <div className="p-4">
               <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
               <p className="text-gray-700 mb-2">{product.price}</p>
-              <Button className="w-full" onClick={() => window.location.href = "/request"}>
+              <button
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+                onClick={() => window.location.href = "/request"}
+              >
                 Request to Buy
-              </Button>
-            </CardContent>
-          </Card>
+              </button>
+            </div>
+          </div>
         ))}
       </div>
 
@@ -84,7 +85,12 @@ export default function Home() {
             placeholder="More details (optional)"
             className="w-full p-3 border rounded-lg"
           ></textarea>
-          <Button className="w-full" type="submit">Submit Request</Button>
+          <button
+            type="submit"
+            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700"
+          >
+            Submit Request
+          </button>
         </form>
       </div>
     </div>
