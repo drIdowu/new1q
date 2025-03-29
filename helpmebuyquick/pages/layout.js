@@ -1,5 +1,4 @@
-import "./globals.css";
-
+import './global.css'; r
 
 
 export default function RootLayout({ children }) {
