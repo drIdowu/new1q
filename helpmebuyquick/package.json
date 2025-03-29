@@ -2,17 +2,20 @@
   "name": "helpmebuyquick",
   "version": "1.0.0",
   "main": "server.js",
- "scripts": {
-  "build": "react-scripts build",
-  "start": "react-scripts start",
- },
- },
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "server": "node server.js" // Added a script to start the Express server
+  },
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.9",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "react": "^17.0.2", // Added React as a dependency
+    "react-dom": "^17.0.2", // Added React DOM as a dependency
+    "react-scripts": "4.0.3" // Added react-scripts for React app
   },
   "license": "MIT"
 }
