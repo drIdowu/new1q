@@ -2,9 +2,10 @@
   "name": "helpmebuyquick",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "build": "ng build"
+ "scripts": {
+  "build": "react-scripts build",
+  "start": "react-scripts start"
+}
   },
   "dependencies": {
     "express": "^4.17.1",
